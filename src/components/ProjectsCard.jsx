@@ -1,14 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Github, ExternalLink } from 'lucide-react';
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, isLoaded, delay = 0 }) => {
+    const [isVisible, setIsVisible] = useState(false);
+    
+    useEffect(() => {
+        if (isLoaded) {
+            const timer = setTimeout(() => {
+                setIsVisible(true);
+            }, delay);
+            
+            return () => clearTimeout(timer);
+        }
+    }, [isLoaded, delay]);
+
     return (
-        <div className="bg-gray-800/30 rounded-xl overflow-hidden group hover:bg-gray-700/30 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 flex flex-col">
+        <div 
+            className={`bg-gray-800/30 rounded-xl overflow-hidden group flex flex-col transition-all duration-300 ${
+                isVisible 
+                    ? 'opacity-100 transform translate-y-0 hover:scale-105 hover:-translate-y-1 hover:bg-gray-700/30' 
+                    : 'opacity-0 transform translate-y-4'
+            }`}
+            style={{ transitionDelay: `${delay}ms` }}
+        >
             <div className="relative w-full h-36 overflow-hidden">
                 <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-300 will-change-transform group-hover:scale-105"
                 />
             </div>
 

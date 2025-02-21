@@ -8,7 +8,7 @@ const Navbar = () => {
     const handleScroll = () => {
       setScrolling(window.scrollY < 50); 
 
-      const sections = ["sobre-mí", "proyectos", "habilidades", "contacto"];
+      const sections = ["about-me", "skills", "projects", "contact"];
       for (let section of sections) {
         const element = document.getElementById(section);
         if (element) {
@@ -32,7 +32,7 @@ const Navbar = () => {
       }`}
     >
       <ul className="flex justify-center space-x-4">
-        {["Sobre mí", "Habilidades", "Proyectos", "Contacto"].map((section) => {
+        {["About me", "Skills", "Projects", "Contact"].map((section) => {
           const sectionId = section.toLowerCase().replace(" ", "-");
           return (
             <li key={section}>

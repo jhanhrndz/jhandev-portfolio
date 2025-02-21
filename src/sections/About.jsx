@@ -4,7 +4,7 @@ import profileImage from "../assets/foto.jpeg";
 
 const About = () => {
     return (
-        <section id="sobre-mí" className="min-h-screen flex items-start px-4 py-12 mt-20">
+        <section id="about-me" className="flex items-start px-4 py-12 mt-20">
             <div className="max-w-3xl w-full mx-auto">
                 <div className="flex flex-col items-start gap-6">
                     <div className="flex items-center gap-3">
@@ -19,23 +19,21 @@ const About = () => {
                                 }}
                             />
                         </div>
-                        <span className="px-3 py-1.5 bg-gray-800/50 backdrop-blur-sm text-green-400 rounded-full text-sm font-medium">
-                            Ingeniero de Sistemas
-                        </span>
+                        <span className="px-3 py-1.5 bg-gray-800/50 backdrop-blur-sm text-green-400 rounded-full text-sm font-medium"> Systems Engineer </span>
                     </div>
 
                     <div className="text-left">
                         <h1 className="text-4xl md:text-5xl font-bold text-white">
-                            Hey, soy <span className="text-blue-400">Jhan Hernandez</span>
+                            Hi, I'm <span className="text-blue-400">Jhan Hernandez</span>
                         </h1>
                     </div>
 
                     <div className="max-w-2xl">
                         <p className="text-lg text-gray-400 leading-relaxed text-left">
-                            <span className="text-gray-300">Estudiante de Ingeneria de Sistemas</span>{' y '}
-                            <span className="text-emerald-400">desarrollador de software full-stack</span>{' '}
-                            de <span className="text-gray-300">Barranquilla, Colombia.</span>{' '}
-                            Apasionado por la tecnología, el aprendizaje continuo y la creación de soluciones con impacto real.
+                            <span className="text-gray-300">Systems Engineering student</span>{' and '}
+                            <span className="text-emerald-400">full-stack software developer</span>{' '}
+                            from <span className="text-gray-300">Barranquilla, Colombia.</span>{' '}
+                            Passionate about technology, continuous learning, and creating solutions with real impact.
                         </p>
                     </div>
 
@@ -45,7 +43,7 @@ const About = () => {
                             className="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-full transition-colors text-sm"
                         >
                             <Mail size={16} />
-                            Contáctame
+                            Contact me
                         </a>
                         <a
                             href="https://www.linkedin.com/in/jhan-carlos-hernández-051aa3301"

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Mail, MapPin, ExternalLink, Copy, CheckCircle, Send, MessageCircleMore, Github, Linkedin } from 'lucide-react';
 
 const Contact = () => {
-    // Contact information variables for easy modification
     const contactInfo = {
         email: "jhandev1022@gmail.com",
         whatsapp: "+57 314 4749495"
@@ -17,7 +16,7 @@ const Contact = () => {
     };
 
     return (
-        <section id="contacto" className="flex items-start px-4 py-12 mt-20">
+        <section id="contact" className="flex items-start px-4 py-12 mt-20">
             <div className="max-w-3xl w-full mx-auto">
                 <div className="flex flex-col items-start gap-6">       
                     <div className="flex items-center gap-3">
@@ -31,7 +30,6 @@ const Contact = () => {
                             Let's work together
                         </span>
                     </div>
-
                     <div className="text-left">
                         <h2 className="text-4xl md:text-5xl font-bold text-white">
                             Get in <span className="text-blue-400">touch</span>

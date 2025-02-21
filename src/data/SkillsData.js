@@ -1,4 +1,4 @@
-import {MessageSquare, Users, GitBranch, Code, Lightbulb, Shuffle, GraduationCap, Clock } from 'lucide-react';
+import {RefreshCw, BookOpen, Repeat, Workflow, LineChart, HeartHandshake,  MessageSquare, Users, GitMerge, Puzzle } from 'lucide-react';
 
 export const technicalSkills = [
     {
@@ -90,51 +90,63 @@ export const technicalSkills = [
 
 export const softSkills = [
     {
-        name: 'Comunicación efectiva',
-        description: 'Capacidad para transmitir ideas de manera clara y asertiva, facilitando la colaboración en equipo.',
-        icon: MessageSquare,
+        name: 'Adaptability',
+        description: 'I quickly adjust to new environments and methodologies.',
+        icon: RefreshCw,
         color: '#10B981'
     },
     {
-        name: 'Trabajo en equipo',
-        description: 'Habilidad para colaborar eficazmente, compartir conocimientos y alcanzar objetivos comunes.',
-        icon: Users,
+        name: 'Self-learning',
+        description: 'I constantly explore new technologies to enhance my skills.',
+        icon: BookOpen,
         color: '#3B82F6'
     },
     {
-        name: 'Metodologías ágiles',
-        description: 'Experiencia en Scrum y metodologías ágiles para gestión eficiente de proyectos.',
-        icon: GitBranch,
+        name: 'Agile methodologies',
+        description: 'I use agile frameworks to optimize development and adapt to changes.',
+        icon: Repeat,
         color: '#8B5CF6'
     },
     {
-        name: 'Pensamiento recursivo',
-        description: 'Capacidad de abordar problemas complejos dividiéndolos en componentes más manejables.',
-        icon: Code,
+        name: 'Logical thinking',
+        description: ' I apply structured reasoning to design optimal solutions.',
+        icon: Workflow,
         color: '#EC4899'
     },
     {
-        name: 'Resolución de problemas',
-        description: 'Análisis sistemático y enfoque estructurado para resolver desafíos técnicos.',
-        icon: Lightbulb,
+        name: 'Analytical thinking',
+        description: 'I evaluate data and patterns to make well-founded decisions.',
+        icon: LineChart,
         color: '#F59E0B'
     },
     {
-        name: 'Adaptabilidad',
-        description: 'Flexibilidad para adaptarse a nuevos entornos y tecnologías emergentes.',
-        icon: Shuffle,
+        name: 'Effective communication',
+        description: 'I foster trust and respect in interactions.',
+        icon: HeartHandshake,
         color: '#6366F1'
     },
     {
-        name: 'Aprendizaje continuo',
-        description: 'Compromiso constante con el desarrollo profesional y actualización de conocimientos.',
-        icon: GraduationCap,
+        name: 'Collaboration',
+        description: ' I work with others to achieve efficient solutions and share knowledge.',
+        icon: Users,
         color: '#14B8A6'
     },
     {
-        name: 'Gestión del tiempo',
-        description: 'Organización eficiente de tareas y proyectos para cumplir plazos establecidos.',
-        icon: Clock,
+        name: 'Communication skills',
+        description: 'I express ideas clearly to facilitate teamwork.',
+        icon: MessageSquare,
+        color: '#F472B6'
+    },
+    {
+        name: 'Teamwork',
+        description: 'I contribute and learn in collaborative environments to achieve common goals.',
+        icon: GitMerge,
+        color: '#F472B6'
+    },
+    {
+        name: 'Problem-solving',
+        description: 'I find efficient solutions to real-world challenges.',
+        icon: Puzzle,
         color: '#F472B6'
     }
 ];
