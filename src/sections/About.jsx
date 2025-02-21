@@ -4,7 +4,7 @@ import profileImage from "../assets/foto.jpeg";
 
 const About = () => {
     return (
-        <section id="sobre-mí" className="min-h-screen flex items-start px-4 py-12">
+        <section id="sobre-mí" className=" flex items-start px-4 py-12 mt-20">
             <div className="max-w-3xl w-full mx-auto">
                 <div className="flex flex-col items-start gap-6">
                     <div className="flex items-center gap-3">

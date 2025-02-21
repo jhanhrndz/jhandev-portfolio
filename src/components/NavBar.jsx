@@ -32,7 +32,7 @@ const Navbar = () => {
       }`}
     >
       <ul className="flex justify-center space-x-4">
-        {["Sobre mí", "Proyectos", "Habilidades", "Contacto"].map((section) => {
+        {["Sobre mí", "Habilidades", "Proyectos", "Contacto"].map((section) => {
           const sectionId = section.toLowerCase().replace(" ", "-");
           return (
             <li key={section}>
