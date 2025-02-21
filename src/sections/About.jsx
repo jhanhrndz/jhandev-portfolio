@@ -40,30 +40,31 @@ const About = () => {
                     <div className="flex gap-3 mt-2">
                         <a
                             href="mailto:jhancarlosh134@email.com"
-                            className="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-full transition-colors text-xs"
+                            className="flex items-center gap-2 px-4 py-2 max-sm:px-3 max-sm:py-1 bg-gray-800 hover:bg-gray-700 text-white rounded-full transition-colors text-sm max-sm:text-[10px]"
                         >
-                            <Mail size={16} />
+                            <Mail size={16} className="max-sm:w-4 max-sm:h-4" />
                             Contact me
                         </a>
                         <a
                             href="https://www.linkedin.com/in/jhan-carlos-hernández-051aa3301"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-full transition-colors text-xs"
+                            className="flex items-center gap-2 px-4 py-2 max-sm:px-3 max-sm:py-1 bg-gray-800 hover:bg-gray-700 text-white rounded-full transition-colors text-sm max-sm:text-[10px]"
                         >
-                            <Linkedin size={16} />
+                            <Linkedin size={16} className="max-sm:w-4 max-sm:h-4" />
                             LinkedIn
                         </a>
                         <a
                             href="https://github.com/jhanhrndz"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-full transition-colors text-xs"
+                            className="flex items-center gap-2 px-4 py-2 max-sm:px-3 max-sm:py-1 bg-gray-800 hover:bg-gray-700 text-white rounded-full transition-colors text-sm max-sm:text-[10px]"
                         >
-                            <Github size={16} />
+                            <Github size={16} className="max-sm:w-4 max-sm:h-4" />
                             GitHub
                         </a>
                     </div>
+
                 </div>
             </div>
         </section>
