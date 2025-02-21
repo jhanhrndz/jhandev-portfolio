@@ -3,6 +3,7 @@ import About from "./sections/About.jsx";
 import Skills from './sections/Skills'
 import Projects from './sections/Projects.jsx'
 import Contact from './sections/Contatc.jsx'
+import Footer from './components/Footer.jsx'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Skills/>
       <Projects/>
       <Contact/>
+      <Footer/>
     </div>
   );
 }
