@@ -40,7 +40,7 @@ const About = () => {
                     <div className="flex gap-3 mt-2">
                         <a
                             href="mailto:jhancarlosh134@email.com"
-                            className="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-full transition-colors text-sm"
+                            className="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-full transition-colors text-xs"
                         >
                             <Mail size={16} />
                             Contact me
@@ -49,7 +49,7 @@ const About = () => {
                             href="https://www.linkedin.com/in/jhan-carlos-hernández-051aa3301"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-full transition-colors text-sm"
+                            className="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-full transition-colors text-xs"
                         >
                             <Linkedin size={16} />
                             LinkedIn
@@ -58,7 +58,7 @@ const About = () => {
                             href="https://github.com/jhanhrndz"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-full transition-colors text-sm"
+                            className="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-full transition-colors text-xs"
                         >
                             <Github size={16} />
                             GitHub

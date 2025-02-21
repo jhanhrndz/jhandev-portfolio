@@ -51,7 +51,7 @@ const Contact = () => {
                                     <div className="flex gap-3 mt-4">
                                         <a
                                             href={`mailto:${contactInfo.email}`}
-                                            className="flex-1 px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg text-white text-sm font-medium flex items-center justify-center gap-2"
+                                            className="flex-1 px-2 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg text-white text-xs font-medium flex items-center justify-center gap-2"
                                         >
                                             <Send className="w-4 h-4" />
                                             Send mail

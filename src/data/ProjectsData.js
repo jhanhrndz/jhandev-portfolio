@@ -1,10 +1,10 @@
 
-import ecommerce from "../assets/imagen-ecommerce.jpg";
-import transpormap from "../assets/transpormap-imagen.jpg";
+import ecommerce from "../assets/imagen-ecommerce.webp";
+import transpormap from "../assets/transpormap-imagen.webp";
 
 export const projects = [
     {
-      title: "TransporMap",
+      title: "TransporMap.",
       description: "Java app that lets users report real-time road hazards and obstructions, reshaping urban mobility.",
       image: transpormap,
       tags: ["Java", "Oracle Database", "Social", "MapViewer", "Transport", "GPS", "Brower", "Invias.gov"],

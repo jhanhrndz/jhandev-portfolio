@@ -1,22 +1,32 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Github, ExternalLink } from 'lucide-react';
 
-const ProjectCard = ({ project, isLoaded, delay = 0 }) => {
+const ProjectCard = ({ project, delay = 0 }) => {
     const [isVisible, setIsVisible] = useState(false);
-    
+    const cardRef = useRef(null);
+
     useEffect(() => {
-        if (isLoaded) {
-            const timer = setTimeout(() => {
-                setIsVisible(true);
-            }, delay);
-            
-            return () => clearTimeout(timer);
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                    observer.disconnect(); // Evita reejecutar la animación cada vez
+                }
+            },
+            { threshold: 0.3 } // Activa cuando el 30% del elemento es visible
+        );
+
+        if (cardRef.current) {
+            observer.observe(cardRef.current);
         }
-    }, [isLoaded, delay]);
+
+        return () => observer.disconnect();
+    }, []);
 
     return (
-        <div 
-            className={`bg-gray-800/30 rounded-xl overflow-hidden group flex flex-col transition-all duration-300 ${
+        <div
+            ref={cardRef}
+            className={`bg-gray-800/30 rounded-xl overflow-hidden group flex flex-col transition-all duration-500 ease-out ${
                 isVisible 
                     ? 'opacity-100 transform translate-y-0 hover:scale-105 hover:-translate-y-1 hover:bg-gray-700/30' 
                     : 'opacity-0 transform translate-y-4'
@@ -33,9 +43,7 @@ const ProjectCard = ({ project, isLoaded, delay = 0 }) => {
             </div>
 
             <div className="p-4 flex flex-col flex-grow">
-                <h3 className="text-lg font-bold text-white mb-2">
-                    {project.title}
-                </h3>
+                <h3 className="text-lg font-bold text-white mb-2">{project.title}</h3>
                 <p className="text-gray-400 text-xs mb-3 flex-grow opacity-80 group-hover:opacity-100 transition-opacity duration-300">
                     {project.description}
                 </p>

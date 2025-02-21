@@ -1,20 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { FolderGit2 } from 'lucide-react';
 import { projects } from '../data/ProjectsData';
 import ProjectCard from '../components/ProjectsCard';
 
 const Projects = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  
-  useEffect(() => {
-    // Pequeño retraso para asegurar que el DOM esté listo
-    const timer = setTimeout(() => {
-      setIsLoaded(true);
-    }, 100);
-    
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <section id="projects" className="flex items-start px-4 py-12 mt-20">
       <div className="max-w-3xl w-full mx-auto">
@@ -44,8 +33,7 @@ const Projects = () => {
               <ProjectCard 
                 key={index} 
                 project={project} 
-                isLoaded={isLoaded}
-                delay={index * 50} // Crea un efecto escalonado
+                delay={index * 50}
               />
             ))}
           </div>
