@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Github, ExternalLink } from 'lucide-react';
-import kaggleIcon from "../assets/icons/kaggleIcon.svg";
+import kaggleIcon from "../assets/icons/kaggleIcon-white.svg";
 
 const ProjectCard = ({ project, delay = 0 }) => {
     const [isVisible, setIsVisible] = useState(false);
@@ -46,7 +46,7 @@ const ProjectCard = ({ project, delay = 0 }) => {
                         rel="noopener noreferrer"
                         className="flex items-center justify-center gap-1 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors text-xs"
                     >
-                        <img src={kaggleIcon} alt="Kaggle Logo" className="size-4" />
+                        <img src={kaggleIcon} alt="Kaggle Logo" className="size-3" />
                         Kaggle
                     </a>
                 );
