@@ -4,7 +4,7 @@ import profileImage from "../assets/foto.jpeg";
 
 const HeyIcon = ({ className = "", width = "40", height = "40" }) => {
     return (
-        <svg 
+        <svg
             className={`${className} animate-waving-hand inline-block`}
             xmlns="http://www.w3.org/2000/svg"
             width={width}
@@ -61,10 +61,12 @@ const About = () => {
                     </div>
 
                     <div className="text-left">
-                        <h1 className="text-4xl md:text-5xl font-bold text-white flex items-center gap-2">
-                            Hi&nbsp;
-                            <HeyIcon className="w-8 h-8 md:w-10 md:h-10" />
-                            , I'm&nbsp; <span className="text-blue-400">Jhan Hernandez</span>
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
+                            <div className="flex flex-wrap md:flex-nowrap items-center gap-2">
+                                Hi <HeyIcon className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 inline-block" />
+                                <span>, I'm</span>
+                                <span className="text-blue-400">Jhan Hernandez</span>
+                            </div>
                         </h1>
                     </div>
 
