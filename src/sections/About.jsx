@@ -64,7 +64,7 @@ const About = () => {
                         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
                             <div className="flex flex-wrap md:flex-nowrap items-center gap-2">
                                 Hi <HeyIcon className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 inline-block" />
-                                <span>, I'm</span>
+                                <span className='pr-2'>, I'm</span>
                                 <span className="text-blue-400">Jhan Hernandez</span>
                             </div>
                         </h1>
