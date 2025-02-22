@@ -1,6 +1,7 @@
 
-import ecommerce from "../assets/imagen-ecommerce.webp";
-import transpormap from "../assets/transpormap-imagen.webp";
+import ecommerce from "../assets/projects-imagen/imagen-ecommerce.webp";
+import transpormap from "../assets/projects-imagen/transpormap-imagen.webp";
+import comparendo from "../assets/projects-imagen/Comparendo.png";
 
 export const projects = [
     {
@@ -9,6 +10,7 @@ export const projects = [
       image: transpormap,
       tags: ["Java", "Oracle Database", "Social", "MapViewer", "Transport", "GPS", "Brower", "Invias.gov"],
       sourceCode: "https://github.com/jhanhrndz/transpormap",
+      platform: "github",
     },
     {
       title: "TiendaYa: eCommerce in Barranquilla.",
@@ -16,5 +18,14 @@ export const projects = [
       image: ecommerce,
       tags: ["React", "Web Development", "MySQL", "Nodejs", "Claudinary", "eCommerce", "JavaScript", "Clever Cloud", "Cloud Storage"],
       sourceCode: "https://github.com/Nasor2/tiendaYa-project",
+      platform: "github",
+    },
+    {
+      title: "Traffic Fines Analysis in Barranquilla",
+      description: "Analysis of traffic fines in Barranquilla, uncovering trends and violations.",
+      image: comparendo,
+      tags: ["Data Analysis", "Python", "MySQL", "Analysis", "Data Visualization", "Marchine Learning"],
+      sourceCode: "https://www.kaggle.com/code/samuelpeaortega/comparendos-en-barranquilla-colombia",
+      platform: "kaggle",
     }
   ];

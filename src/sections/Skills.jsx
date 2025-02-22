@@ -20,7 +20,7 @@ const Skills = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white"> <span className="text-blue-400">Technical</span> skills </h2>
           </div>
           <div className="max-w-2xl">
-            <p className="text-lg text-gray-400 leading-relaxed text-left">
+            <p className="text-base md:text-lg text-gray-400 leading-relaxed text-left">
               I use these technologies and tools to develop solutions that solve real problems, applying both technical skills and agile methodologies to optimize performance and user experience.
             </p>
           </div>

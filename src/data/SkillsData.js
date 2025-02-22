@@ -135,18 +135,18 @@ export const softSkills = [
         name: 'Communication skills',
         description: 'I express ideas clearly to facilitate teamwork.',
         icon: MessageSquare,
-        color: '#F472B6'
+        color: '#A3E4D7'
     },
     {
         name: 'Teamwork',
         description: 'I contribute and learn in collaborative environments to achieve common goals.',
         icon: GitMerge,
-        color: '#F472B6'
+        color: '#2C3E50'
     },
     {
         name: 'Problem-solving',
         description: 'I find efficient solutions to real-world challenges.',
         icon: Puzzle,
-        color: '#F472B6'
+        color: '#EB984E'
     }
 ];

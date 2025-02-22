@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import kaggleIcon from "../assets/icons/kaggleIcon-gray.svg";
 import { Mail, MapPin, ExternalLink, Copy, CheckCircle, Send, MessageCircleMore, Github, Linkedin } from 'lucide-react';
 
 const Contact = () => {
@@ -12,7 +13,7 @@ const Contact = () => {
     const handleCopyEmail = () => {
         navigator.clipboard.writeText(contactInfo.email);
         setCopied(true);
-        setTimeout(() => setCopied(false), 2000);
+        setTimeout(() => setCopied(false), 5000);
     };
 
     return (
@@ -36,7 +37,7 @@ const Contact = () => {
                         </h2>
                     </div>
                     <div className="max-w-2xl">
-                        <p className="text-lg text-gray-400 leading-relaxed text-left"> Feel free to reach out to me if you're looking for a developer, have any questions, or just want to connect. </p>
+                        <p className="text-base md:text-lg text-gray-400 leading-relaxed text-left"> Feel free to reach out to me if you're looking for a developer, have any questions, or just want to connect. </p>
                     </div>
 
                     <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 mt-2">
@@ -137,6 +138,14 @@ const Contact = () => {
                                     className="p-2 bg-gray-700/50 hover:bg-gray-600/50 rounded-full text-gray-300 hover:text-white transition-all duration-300 transform hover:scale-110"
                                 >
                                     <Linkedin className="w-5 h-5" />
+                                </a>
+                                <a
+                                    href="https://www.kaggle.com/jhanhernndez"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="p-2 bg-gray-700/50 hover:bg-gray-600/50 rounded-full text-gray-300 hover:text-white transition-all duration-300 transform hover:scale-110"
+                                >
+                                    <img src={kaggleIcon} alt="Kaggle Logo" className="size-5" />
                                 </a>
                             </div>
                         </div>
