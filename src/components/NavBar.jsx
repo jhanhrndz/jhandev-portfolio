@@ -28,7 +28,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-4 left-1/2 transform -translate-x-1/2 w-[90%] md:w-[40%] lg:w-[35%] px-4 py-2 rounded-xl transition-all duration-300 z-50 ${
-        scrolling ? "bg-white/80 backdrop-blur-md" : "bg-white shadow-lg"
+        scrolling ? "bg-white/70 backdrop-blur-md" : "bg-white shadow-lg"
       }`}
     >
       <ul className="flex justify-center space-x-4">

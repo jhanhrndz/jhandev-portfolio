@@ -5,7 +5,7 @@ import { Mail, MapPin, ExternalLink, Copy, CheckCircle, Send, MessageCircleMore,
 const Contact = () => {
     const contactInfo = {
         email: "jhandev1022@gmail.com",
-        whatsapp: "+57 314 4749495"
+        whatsapp: "+57 300 7011750"
     };
 
     const [copied, setCopied] = useState(false);
