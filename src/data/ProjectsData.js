@@ -2,6 +2,7 @@ import ecommerce from "../assets/projects-imagen/imagen-ecommerce.webp";
 import transpormap from "../assets/projects-imagen/transpormap-imagen.webp";
 import comparendo from "../assets/projects-imagen/Comparendo.png";
 import epp from "../assets/projects-imagen/epp.jpg";
+import sleepDisorders from "../assets/projects-imagen/sleep-disorders.jpg";
 
 export const projects = [
   {
@@ -12,6 +13,15 @@ export const projects = [
     platforms: [
       { type: "github", url: "https://github.com/jhanhrndz/buildsafe-frontend" },
       { type: "live", url: "https://www.youtube.com/watch?v=4gsLCIfnlEg" } 
+    ],
+  },
+  {
+    title: "Sleep Health and Lifestyle Disorder Prediction",
+    description: "This project uses clinical and lifestyle data to train machine learning models (logistic regression and MLP) to classify sleep disorders such as insomnia and sleep apnea.",
+    image: sleepDisorders,
+    tags: ["Data Analysis", "Python", "Data Visualization", "Analysis", "Marchine Learning"],
+    platforms: [
+      { type: "colab", url: "https://colab.research.google.com/drive/1zGdksR7Xc8JzS-JN9kYZakviKL1J5k3N?usp=sharing" },
     ],
   },
   {
