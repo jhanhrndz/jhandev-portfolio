@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Github } from 'lucide-react';
+import { Mail, Linkedin, Github, Download } from 'lucide-react';
 import profileImage from "../assets/foto.jpeg";
 import PropTypes from 'prop-types';
 
@@ -108,6 +108,15 @@ const About = () => {
                         >
                             <Github size={16} className="max-sm:w-4 max-sm:h-4" />
                             GitHub
+                        </a>
+                        <a
+                            href="/CV - Jhan Hernández.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 px-4 py-2 max-sm:px-3 max-sm:py-1 bg-gray-800 hover:bg-gray-700 text-white rounded-full transition-colors text-sm max-sm:text-[10px]"
+                        >
+                            <Download size={16} className="max-sm:w-4 max-sm:h-4" />
+                            CV
                         </a>
                     </div>
 
