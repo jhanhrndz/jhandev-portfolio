@@ -86,36 +86,36 @@ const About = () => {
                     <div className="flex gap-3 mt-2">
                         <a
                             href="mailto:jhancarlosh134@email.com"
-                            className="flex items-center gap-2 px-4 py-2 max-sm:px-3 max-sm:py-1 bg-gray-800 hover:bg-gray-700 text-white rounded-full transition-colors text-sm max-sm:text-[10px]"
+                            className="flex items-center gap-2 px-4 py-2 max-sm:px-1.5 max-sm:py-0.5 bg-gray-800 hover:bg-gray-700 text-white rounded-full transition-colors text-sm max-sm:text-[9px]"
                         >
-                            <Mail size={16} className="max-sm:w-4 max-sm:h-4" />
+                            <Mail className="w-4 h-4 max-sm:w-2.5 max-sm:h-2.5" />
                             Contact me
                         </a>
                         <a
                             href="https://www.linkedin.com/in/jhan-carlos-hernández-051aa3301"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-2 px-4 py-2 max-sm:px-3 max-sm:py-1 bg-gray-800 hover:bg-gray-700 text-white rounded-full transition-colors text-sm max-sm:text-[10px]"
+                            className="flex items-center gap-2 px-4 py-2 max-sm:px-3 max-sm:py-1 bg-gray-800 hover:bg-gray-700 text-white rounded-full transition-colors text-sm max-sm:text-[9px]"
                         >
-                            <Linkedin size={16} className="max-sm:w-4 max-sm:h-4" />
+                            <Linkedin className="w-4 h-4 max-sm:w-3 max-sm:h-3" />
                             LinkedIn
                         </a>
                         <a
                             href="https://github.com/jhanhrndz"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-2 px-4 py-2 max-sm:px-3 max-sm:py-1 bg-gray-800 hover:bg-gray-700 text-white rounded-full transition-colors text-sm max-sm:text-[10px]"
+                            className="flex items-center gap-2 px-4 py-2 max-sm:px-3 max-sm:py-1 bg-gray-800 hover:bg-gray-700 text-white rounded-full transition-colors text-sm max-sm:text-[9px]"
                         >
-                            <Github size={16} className="max-sm:w-4 max-sm:h-4" />
+                            <Github className="w-4 h-4 max-sm:w-3 max-sm:h-3" />
                             GitHub
                         </a>
                         <a
                             href="/CV - Jhan Hernández.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-2 px-4 py-2 max-sm:px-3 max-sm:py-1 bg-gray-800 hover:bg-gray-700 text-white rounded-full transition-colors text-sm max-sm:text-[10px]"
+                            className="flex items-center gap-2 px-4 py-2 max-sm:px-3 max-sm:py-1 bg-gray-800 hover:bg-gray-700 text-white rounded-full transition-colors text-sm max-sm:text-[9px]"
                         >
-                            <Download size={16} className="max-sm:w-4 max-sm:h-4" />
+                            <Download className="w-4 h-4 max-sm:w-3 max-sm:h-3" />
                             CV
                         </a>
                     </div>
