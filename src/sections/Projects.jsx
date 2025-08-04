@@ -1,4 +1,3 @@
-import React from 'react';
 import { FolderGit2 } from 'lucide-react';
 import { projects } from '../data/ProjectsData';
 import ProjectCard from '../components/ProjectsCard';
@@ -24,7 +23,7 @@ const Projects = () => {
           </div>
           <div className="max-w-2xl">
             <p className="text-base md:text-lg text-gray-400 leading-relaxed text-left">
-              Discover the projects I've worked on, developing solutions to address real-world challenges.
+              Discover the projects I&#39;ve worked on, developing solutions to address real-world challenges.
             </p>
           </div>
 

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import kaggleIcon from "../assets/icons/kaggleIcon-gray.svg";
-import { Mail, MapPin, ExternalLink, Copy, CheckCircle, Send, MessageCircleMore, Github, Linkedin } from 'lucide-react';
+import { Mail, MapPin, Copy, CheckCircle, Send, MessageCircleMore, Github, Linkedin } from 'lucide-react';
 
 const Contact = () => {
     const contactInfo = {
@@ -28,7 +28,7 @@ const Contact = () => {
                             </div>
                         </div>
                         <span className="px-3 py-1.5 bg-gray-800/50 backdrop-blur-sm text-blue-400 rounded-full text-sm font-medium">
-                            Let's work together
+                            Let&#39;s work together
                         </span>
                     </div>
                     <div className="text-left">
@@ -37,7 +37,7 @@ const Contact = () => {
                         </h2>
                     </div>
                     <div className="max-w-2xl">
-                        <p className="text-base md:text-lg text-gray-400 leading-relaxed text-left"> Feel free to reach out to me if you're looking for a developer, have any questions, or just want to connect. </p>
+                        <p className="text-base md:text-lg text-gray-400 leading-relaxed text-left"> Feel free to reach out to me if you&#39;re looking for a developer, have any questions, or just want to connect. </p>
                     </div>
 
                     <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 mt-2">

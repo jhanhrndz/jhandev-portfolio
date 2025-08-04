@@ -1,4 +1,3 @@
-import React from 'react';
 import { Code2, Brain } from 'lucide-react';
 import { technicalSkills, softSkills } from '../data/SkillsData';
 
