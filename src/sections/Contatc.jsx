@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import kaggleIcon from "../assets/icons/kaggleIcon-gray.svg";
-import { Mail, MapPin, Copy, CheckCircle, Send, MessageCircleMore, Github, Linkedin } from 'lucide-react';
+import { Mail, MapPin, Copy, CheckCircle, Send, MessageCircleMore, Github, Linkedin } from '../components/PlatformIcons';
 
 const Contact = () => {
     const contactInfo = {
