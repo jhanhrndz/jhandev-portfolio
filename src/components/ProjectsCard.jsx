@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Github, ExternalLink } from 'lucide-react';
-import kaggleIcon from "../assets/icons/kaggleIcon-white.svg";
+import { useState, useEffect, useRef } from 'react';
+import PropTypes from 'prop-types';
+import ProjectPlatformButtons from './ProjectPlatformButtons';
 
 const ProjectCard = ({ project, delay = 0 }) => {
     const [isVisible, setIsVisible] = useState(false);
@@ -23,37 +23,6 @@ const ProjectCard = ({ project, delay = 0 }) => {
 
         return () => observer.disconnect();
     }, []);
-
-    const renderPlatformButton = () => {
-        switch (project.platform) {
-            case "github":
-                return (
-                    <a
-                        href={project.sourceCode}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-1 px-3 py-1.5 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors text-xs"
-                    >
-                        <Github size={12} />
-                        GitHub
-                    </a>
-                );
-            case "kaggle":
-                return (
-                    <a
-                        href={project.sourceCode}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-1 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors text-xs"
-                    >
-                        <img src={kaggleIcon} alt="Kaggle Logo" className="size-3" />
-                        Kaggle
-                    </a>
-                );
-            default:
-                return null;
-        }
-    };
 
     return (
         <div
@@ -83,29 +52,32 @@ const ProjectCard = ({ project, delay = 0 }) => {
                     {project.tags.map((tag, tagIndex) => (
                         <span
                             key={tagIndex}
-                            className="px-2 py-0.5 bg-gray-700/50 rounded-full text-xs text-blue-400"
+                            className="px-2 py-0.5 bg-gray-700/50 rounded-full text-[10px] text-blue-400"
                         >
                             {tag}
                         </span>
                     ))}
                 </div>
-                <div className={project.demo ? "grid grid-cols-2 gap-2" : "grid grid-cols-1"}>
-                    {renderPlatformButton()} 
-                    {project.demo && (
-                        <a
-                            href={project.demo}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center justify-center gap-1 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors text-xs"
-                        >
-                            <ExternalLink size={12} />
-                            Demo
-                        </a>
-                    )}
-                </div>
+                <ProjectPlatformButtons platforms={project.platforms} />
             </div>
         </div>
     );
+};
+
+ProjectCard.propTypes = {
+    project: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired,
+        tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+        platforms: PropTypes.arrayOf(
+            PropTypes.shape({
+                type: PropTypes.oneOf(['github', 'kaggle', 'demo', 'live']).isRequired,
+                url: PropTypes.string.isRequired,
+            })
+        ).isRequired,
+    }).isRequired,
+    delay: PropTypes.number,
 };
 
 export default ProjectCard;
