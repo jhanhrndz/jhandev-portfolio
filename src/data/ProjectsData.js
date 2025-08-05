@@ -3,6 +3,7 @@ import transpormap from "../assets/projects-imagen/transpormap-imagen.webp";
 import comparendo from "../assets/projects-imagen/Comparendo.png";
 import epp from "../assets/projects-imagen/epp.jpg";
 import sleepDisorders from "../assets/projects-imagen/sleep-disorders.jpg";
+import HeartDisease from "../assets/projects-imagen/Heart-Disease-Prediction.webp";
 
 export const projects = [
   {
@@ -13,6 +14,15 @@ export const projects = [
     platforms: [
       { type: "github", url: "https://github.com/jhanhrndz/buildsafe-frontend" },
       { type: "live", url: "https://www.youtube.com/watch?v=4gsLCIfnlEg" } 
+    ],
+  },
+  {
+    title: "Heart Disease Detection",
+    description: "This project compares ML models (SVM, decision tree, logistic regression) using clinical data to predict heart disease.",
+    image: HeartDisease,
+    tags: ["Data Analysis", "Python", "Data Visualization", "Analysis", "Marchine Learning", "IA"],
+    platforms: [
+      { type: "colab", url: "https://colab.research.google.com/drive/10fhckVmHBS6LtYug8ziTmXPmuUJ-_Lgw?usp=sharing" },
     ],
   },
   {
