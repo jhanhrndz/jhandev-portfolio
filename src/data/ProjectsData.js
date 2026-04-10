@@ -1,8 +1,8 @@
 import ecommerce from "../assets/projects-imagen/imagen-ecommerce.webp";
 import transpormap from "../assets/projects-imagen/transpormap-imagen.webp";
-import comparendo from "../assets/projects-imagen/Comparendo.png";
-import epp from "../assets/projects-imagen/epp.jpg";
-import sleepDisorders from "../assets/projects-imagen/sleep-disorders.jpg";
+import comparendo from "../assets/projects-imagen/Comparendo.webp";
+import epp from "../assets/projects-imagen/epp.webp";
+import sleepDisorders from "../assets/projects-imagen/sleep-disorders.webp";
 import HeartDisease from "../assets/projects-imagen/Heart-Disease-Prediction.webp";
 
 export const projects = [
