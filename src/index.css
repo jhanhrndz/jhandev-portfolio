@@ -13,23 +13,17 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* ── Dark theme background (default) ── */
-.dark body {
-  background-color: #09090b;
-  background-image: radial-gradient(ellipse 60% 50% at 50% -15%, rgba(99, 102, 241, 0.15), transparent);
-  color: #e4e4e7;
-}
-
 /* ── Light theme background ── */
 body {
-  background-color: #fafafa;
-  background-image: radial-gradient(ellipse 60% 50% at 50% -15%, rgba(99, 102, 241, 0.08), transparent);
+  background-color: #ffffff;
+  background-image: radial-gradient(ellipse 80% 80% at 50% -20%, rgba(120, 119, 198, 0.15), rgba(255, 255, 255, 0));
   color: #18181b;
 }
 
+/* ── Dark theme background ── */
 .dark body {
-  background-color: #09090b;
-  background-image: radial-gradient(ellipse 60% 50% at 50% -15%, rgba(99, 102, 241, 0.15), transparent);
+  background-color: #0a0a0a;
+  background-image: radial-gradient(ellipse 80% 80% at 50% -20%, rgba(120, 119, 198, 0.3), rgba(255, 255, 255, 0));
   color: #e4e4e7;
 }
 

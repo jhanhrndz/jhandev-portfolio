@@ -20,7 +20,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen transition-colors duration-300 bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100">
+    <div className="relative min-h-screen text-zinc-900 dark:text-zinc-100">
       <Navbar />
       <main className="pb-10">
         <About />
