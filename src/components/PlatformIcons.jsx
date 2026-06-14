@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Github, ExternalLink, PlayCircle, Mail, Linkedin, Download, MapPin, Copy, CheckCircle, Send, MessageCircleMore } from 'lucide-react';
 
 // icons export
@@ -28,7 +29,7 @@ export const GoogleColab = (props) => (
 );
 
 
-export const HeyIcon = (className="") => (
+export const HeyIcon = ({ className = "" }) => (
   <svg
     className={`${className} animate-waving-hand inline-block`}
     xmlns="http://www.w3.org/2000/svg"
@@ -58,3 +59,7 @@ export const HeyIcon = (className="") => (
     </g>
   </svg>
 );
+
+HeyIcon.propTypes = {
+  className: PropTypes.string,
+};

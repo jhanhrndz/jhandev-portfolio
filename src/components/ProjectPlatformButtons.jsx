@@ -83,7 +83,7 @@ const ProjectPlatformButtons = ({ platforms }) => (
 ProjectPlatformButtons.propTypes = {
     platforms: PropTypes.arrayOf(
         PropTypes.shape({
-            type: PropTypes.oneOf(['github', 'kaggle', 'demo', 'live']).isRequired,
+            type: PropTypes.oneOf(['github', 'kaggle', 'demo', 'live', 'colab']).isRequired,
             url: PropTypes.string.isRequired,
         })
     ).isRequired,

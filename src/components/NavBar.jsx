@@ -27,21 +27,23 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-4 left-1/2 transform -translate-x-1/2 w-[90%] md:w-[40%] lg:w-[35%] px-4 py-2 rounded-xl transition-all duration-300 z-50 ${
-        scrolling ? "bg-white/70 backdrop-blur-md" : "bg-white shadow-lg"
+      className={`fixed top-4 left-1/2 transform -translate-x-1/2 w-[90%] md:w-[45%] lg:w-[35%] px-4 py-2.5 rounded-xl transition-all duration-300 z-50 border ${
+        scrolling 
+          ? "bg-gray-950/80 border-gray-800/80 backdrop-blur-md shadow-2xl" 
+          : "bg-gray-900/40 border-gray-800/40 backdrop-blur-sm shadow-lg"
       }`}
     >
-      <ul className="flex justify-center space-x-4">
+      <ul className="flex justify-center space-x-6">
         {["About me", "Skills", "Projects", "Contact"].map((section) => {
           const sectionId = section.toLowerCase().replace(" ", "-");
           return (
             <li key={section}>
               <a
                 href={`#${sectionId}`}
-                className={`text-sm font-medium transition-colors ${
+                className={`text-xs sm:text-sm font-medium transition-colors duration-200 ${
                   activeSection === sectionId
-                    ? "text-blue-500"
-                    : "text-gray-700 hover:text-blue-500"
+                    ? "text-blue-400 font-semibold"
+                    : "text-gray-400 hover:text-white"
                 }`}
               >
                 {section}
