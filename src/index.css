@@ -2,23 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  color-scheme: light dark;
-}
-
-html{
+/* ── Theme transition ── */
+html {
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: rgb(10, 10, 10);
-  background-image: radial-gradient(ellipse 60% 60% at 50% -20%, rgba(120, 119, 198, 0.3), rgba(255, 255, 255, 0));
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-@media (prefers-reduced-motion: reduce){
+/* ── Dark theme background (default) ── */
+.dark body {
+  background-color: #09090b;
+  background-image: radial-gradient(ellipse 60% 50% at 50% -15%, rgba(99, 102, 241, 0.15), transparent);
+  color: #e4e4e7;
+}
+
+/* ── Light theme background ── */
+body {
+  background-color: #fafafa;
+  background-image: radial-gradient(ellipse 60% 50% at 50% -15%, rgba(99, 102, 241, 0.08), transparent);
+  color: #18181b;
+}
+
+.dark body {
+  background-color: #09090b;
+  background-image: radial-gradient(ellipse 60% 50% at 50% -15%, rgba(99, 102, 241, 0.15), transparent);
+  color: #e4e4e7;
+}
+
+/* ── Global transitions for theme switching ── */
+*, *::before, *::after {
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ── Timeline line utility ── */
+.timeline-line {
+  position: absolute;
+  left: 1.0625rem; /* 17px, center of 34px dot */
+  top: 0;
+  bottom: 0;
+  width: 2px;
+}
+
+.dark .timeline-line {
+  background: linear-gradient(to bottom, #6366f1, #3b82f6, transparent);
+}
+
+.timeline-line {
+  background: linear-gradient(to bottom, #6366f1, #3b82f6, transparent);
+}
+
+/* ── Accessibility ── */
+@media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

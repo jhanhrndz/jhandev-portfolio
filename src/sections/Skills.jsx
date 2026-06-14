@@ -1,71 +1,166 @@
 import { Code2, Brain } from 'lucide-react';
 import { technicalSkills, softSkills } from '../data/SkillsData';
 
+const skillCategories = [
+  {
+    label: 'Frontend',
+    names: ['React', 'HTML5', 'CSS3', 'Tailwind', 'Bootstrap'],
+    accent: 'indigo',
+  },
+  {
+    label: 'Backend',
+    names: ['Node.js', 'PHP'],
+    accent: 'emerald',
+  },
+  {
+    label: 'Languages',
+    names: ['JavaScript', 'Java', 'Python', 'R'],
+    accent: 'amber',
+  },
+  {
+    label: 'Databases',
+    names: ['Oracle', 'MySQL'],
+    accent: 'rose',
+  },
+  {
+    label: 'Tools',
+    names: ['Git', 'GitHub', 'Postman', 'Figma'],
+    accent: 'sky',
+  },
+];
+
+const accentStyles = {
+  indigo: {
+    badge: 'bg-indigo-100 dark:bg-indigo-500/15 text-indigo-600 dark:text-indigo-400 border-indigo-200 dark:border-indigo-500/20',
+    border: 'border-indigo-200/60 dark:border-indigo-500/15',
+    glow: 'from-indigo-100/50 dark:from-indigo-500/5',
+  },
+  emerald: {
+    badge: 'bg-emerald-100 dark:bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border-emerald-200 dark:border-emerald-500/20',
+    border: 'border-emerald-200/60 dark:border-emerald-500/15',
+    glow: 'from-emerald-100/50 dark:from-emerald-500/5',
+  },
+  amber: {
+    badge: 'bg-amber-100 dark:bg-amber-500/15 text-amber-600 dark:text-amber-400 border-amber-200 dark:border-amber-500/20',
+    border: 'border-amber-200/60 dark:border-amber-500/15',
+    glow: 'from-amber-100/50 dark:from-amber-500/5',
+  },
+  rose: {
+    badge: 'bg-rose-100 dark:bg-rose-500/15 text-rose-600 dark:text-rose-400 border-rose-200 dark:border-rose-500/20',
+    border: 'border-rose-200/60 dark:border-rose-500/15',
+    glow: 'from-rose-100/50 dark:from-rose-500/5',
+  },
+  sky: {
+    badge: 'bg-sky-100 dark:bg-sky-500/15 text-sky-600 dark:text-sky-400 border-sky-200 dark:border-sky-500/20',
+    border: 'border-sky-200/60 dark:border-sky-500/15',
+    glow: 'from-sky-100/50 dark:from-sky-500/5',
+  },
+};
+
 const Skills = () => {
   return (
-    <section id="skills" className="flex items-start px-4 py-12 mt-20">
-      <div className="max-w-3xl w-full mx-auto">
+    <section id="skills" className="flex items-start px-4 sm:px-6 lg:px-8 py-12 mt-20">
+      <div className="max-w-6xl w-full mx-auto">
         <div className="flex flex-col items-start gap-6">
           <div className="flex items-center gap-3">
             <div className="relative">
-              <div className="w-14 h-14 rounded-full bg-gradient-to-b from-blue-400/20 to-blue-500/20 absolute blur-md"></div>
-              <div className="w-14 h-14 rounded-full bg-blue-500/20 relative flex items-center justify-center">
-                <Code2 className="w-8 h-8 text-blue-400" />
+              <div className="w-14 h-14 rounded-full bg-gradient-to-b from-indigo-200/40 to-indigo-300/40 dark:from-indigo-400/20 dark:to-indigo-500/20 absolute blur-md"></div>
+              <div className="w-14 h-14 rounded-full bg-indigo-100 dark:bg-indigo-500/20 relative flex items-center justify-center">
+                <Code2 className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
               </div>
             </div>
-            <span className="px-3 py-1.5 bg-gray-800/50 backdrop-blur-sm text-blue-400 rounded-full text-sm font-medium"> My tech stack and skills </span>
+            <span className="px-3 py-1.5 bg-zinc-100 dark:bg-zinc-800/50 backdrop-blur-sm text-indigo-600 dark:text-indigo-400 rounded-full text-sm font-medium">
+              My tech stack and skills
+            </span>
           </div>
           <div className="text-left">
-            <h2 className="text-4xl md:text-5xl font-bold text-white"> <span className="text-blue-400">Technical</span> skills </h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-zinc-900 dark:text-white">
+              <span className="text-indigo-600 dark:text-indigo-400">Technical</span> skills
+            </h2>
           </div>
-          <div className="max-w-2xl">
-            <p className="text-base md:text-lg text-gray-400 leading-relaxed text-left">
+          <div className="max-w-3xl">
+            <p className="text-base md:text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed text-left">
               I use these technologies and tools to develop solutions that solve real problems, applying both technical skills and agile methodologies to optimize performance and user experience.
             </p>
           </div>
 
-          <div className="w-full">
-            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4">
-              {technicalSkills.map((skill) => (
+          {/* Bento Category Cards Grid */}
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {skillCategories.map((category) => {
+              const skills = category.names
+                .map((name) => technicalSkills.find((s) => s.name === name))
+                .filter(Boolean);
+              const styles = accentStyles[category.accent];
+
+              return (
                 <div
-                  key={skill.name}
-                  className="flex flex-col items-center gap-2 p-2 rounded-xl hover:bg-gray-800/30 transition-all transform hover:scale-105 hover:-translate-y-1 duration-300 group"
+                  key={category.label}
+                  className={`relative overflow-hidden rounded-2xl border bg-white/50 dark:bg-zinc-900/20 backdrop-blur-sm p-5 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 ${styles.border}`}
                 >
-                  <i
-                    className={`${skill.icon} text-3xl transition-transform duration-300 group-hover:rotate-6`}
-                    style={{ color: skill.color }}
-                  ></i>
-                  <span className="text-gray-300 text-xs text-center opacity-80 group-hover:opacity-100 transition-opacity duration-300">{skill.name}</span>
+                  {/* Subtle gradient glow at top */}
+                  <div className={`absolute inset-x-0 top-0 h-16 bg-gradient-to-b ${styles.glow} to-transparent pointer-events-none`}></div>
+
+                  {/* Category Badge */}
+                  <div className="relative mb-4">
+                    <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase border ${styles.badge}`}>
+                      {category.label}
+                    </span>
+                  </div>
+
+                  {/* Skills grid inside card */}
+                  <div className="relative grid grid-cols-3 gap-3">
+                    {skills.map((skill) => (
+                      <div
+                        key={skill.name}
+                        className="flex flex-col items-center gap-1.5 p-2 rounded-xl hover:bg-zinc-100/80 dark:hover:bg-zinc-800/30 transition-all transform hover:scale-105 hover:-translate-y-0.5 duration-300 group"
+                      >
+                        <i
+                          className={`${skill.icon} text-2xl transition-transform duration-300 group-hover:rotate-6`}
+                          style={{ color: skill.color }}
+                        ></i>
+                        <span className="text-zinc-600 dark:text-zinc-300 text-[11px] text-center leading-tight opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+                          {skill.name}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              ))}
-            </div>
+              );
+            })}
           </div>
 
+          {/* Soft Skills Section */}
           <div className="w-full mt-10">
             <div className="flex items-center gap-3">
               <div className="relative">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-b from-emerald-400/20 to-emerald-500/20 absolute blur-md"></div>
-                <div className="w-12 h-12 rounded-full bg-emerald-500/20 relative flex items-center justify-center">
-                  <Brain className="w-6 h-6 text-emerald-400" />
+                <div className="w-12 h-12 rounded-full bg-gradient-to-b from-emerald-200/40 to-emerald-300/40 dark:from-emerald-400/20 dark:to-emerald-500/20 absolute blur-md"></div>
+                <div className="w-12 h-12 rounded-full bg-emerald-100 dark:bg-emerald-500/20 relative flex items-center justify-center">
+                  <Brain className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
                 </div>
               </div>
-              <span className="px-3 py-1.5 bg-gray-800/50 backdrop-blur-sm text-emerald-400 rounded-full text-sm font-medium"> Personal skills </span>
+              <span className="px-3 py-1.5 bg-zinc-100 dark:bg-zinc-800/50 backdrop-blur-sm text-emerald-600 dark:text-emerald-400 rounded-full text-sm font-medium">
+                Personal skills
+              </span>
             </div>
             <div className="text-left mb-6 mt-3">
-              <h2 className="text-3xl font-bold text-white"> <span className="text-emerald-400">Soft</span> skills </h2>
+              <h2 className="text-3xl font-bold text-zinc-900 dark:text-white">
+                <span className="text-emerald-600 dark:text-emerald-400">Soft</span> skills
+              </h2>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {softSkills.map((skill) => (
                 <div
                   key={skill.name}
-                  className="p-3 bg-gray-800/30 rounded-lg hover:bg-gray-700/30 transition-all duration-300 hover:shadow-lg group"
+                  className="p-3 bg-white/80 dark:bg-zinc-900/30 rounded-lg border border-zinc-200 dark:border-zinc-800/50 hover:bg-zinc-50 dark:hover:bg-zinc-800/30 transition-all duration-300 hover:shadow-lg group"
                 >
                   <div className="flex items-center gap-2 mb-1">
                     <skill.icon className="w-4 h-4" style={{ color: skill.color }} />
-                    <h4 className="text-gray-200 font-medium text-sm">{skill.name}</h4>
+                    <h4 className="text-zinc-800 dark:text-zinc-200 font-medium text-sm">{skill.name}</h4>
                   </div>
-                  <p className="text-gray-400 text-xs opacity-80 group-hover:opacity-100 transition-opacity duration-300">{skill.description}</p>
+                  <p className="text-zinc-600 dark:text-zinc-400 text-xs opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+                    {skill.description}
+                  </p>
                 </div>
               ))}
             </div>

@@ -63,10 +63,10 @@ const ProjectPlatformButtons = ({ platforms }) => (
                     href={platform.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`group flex items-center justify-center gap-2 px-3 py-2 rounded-lg transition-colors text-sm group-hover:font-medium 
-                        ${platform.type === 'github' ? 'bg-gray-700 hover:bg-gray-600 text-white' : ''}
+                    className={`group flex items-center justify-center gap-2 px-3 py-2 rounded-lg transition-colors duration-300 text-sm group-hover:font-medium 
+                        ${platform.type === 'github' ? 'bg-zinc-200 hover:bg-zinc-300 dark:bg-zinc-700 dark:hover:bg-zinc-600 text-zinc-800 dark:text-white' : ''}
                         ${platform.type === 'kaggle' ? 'bg-blue-600 hover:bg-blue-700 text-white' : ''}
-                        ${platform.type === 'colab' ? 'bg-gray-700 hover:bg-gray-600 text-white' : ''}
+                        ${platform.type === 'colab' ? 'bg-zinc-200 hover:bg-zinc-300 dark:bg-zinc-700 dark:hover:bg-zinc-600 text-zinc-800 dark:text-white' : ''}
                         ${platform.type === 'demo' ? 'bg-blue-600 hover:bg-blue-700 text-white' : ''}
                         ${platform.type === 'live' ? 'bg-red-600 hover:bg-red-700 text-white' : ''}
                         ${colSpanClass}
