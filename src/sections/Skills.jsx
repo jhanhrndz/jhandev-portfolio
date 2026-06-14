@@ -115,8 +115,10 @@ const Skills = () => {
                         className="flex flex-col items-center gap-1.5 p-2 rounded-xl hover:bg-zinc-100/80 dark:hover:bg-zinc-800/30 transition-all transform hover:scale-105 hover:-translate-y-0.5 duration-300 group"
                       >
                         <i
-                          className={`${skill.icon} text-2xl transition-transform duration-300 group-hover:rotate-6`}
-                          style={{ color: skill.color }}
+                          className={`${skill.icon} text-2xl transition-transform duration-300 group-hover:rotate-6 ${
+                            skill.name === 'GitHub' ? 'text-zinc-900 dark:text-white' : ''
+                          }`}
+                          style={skill.name === 'GitHub' ? {} : { color: skill.color }}
                         ></i>
                         <span className="text-zinc-600 dark:text-zinc-300 text-[11px] text-center leading-tight opacity-80 group-hover:opacity-100 transition-opacity duration-300">
                           {skill.name}
