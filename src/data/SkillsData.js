@@ -85,6 +85,51 @@ export const technicalSkills = [
         name: 'Bootstrap',
         icon: 'devicon-bootstrap-plain',
         color: '#7952B3'
+    },
+    {
+        name: 'Spring Boot',
+        icon: 'devicon-spring-original',
+        color: '#6DB33F'
+    },
+    {
+        name: 'Postgres',
+        icon: 'devicon-postgresql-plain',
+        color: '#336791'
+    },
+    {
+        name: 'SQLite',
+        icon: 'devicon-sqlite-plain',
+        color: '#003B57'
+    },
+    {
+        name: 'Angular',
+        icon: 'devicon-angular-plain',
+        color: '#DD0031'
+    },
+    {
+        name: 'Express',
+        icon: 'devicon-express-original',
+        color: '#000000'
+    },
+    {
+        name: 'Django',
+        icon: 'devicon-django-plain',
+        color: '#092E20'
+    },
+    {
+        name: 'Flask',
+        icon: 'devicon-flask-original',
+        color: '#000000'
+    },
+    {
+        name: 'TypeScript',
+        icon: 'devicon-typescript-plain',
+        color: '#3178C6'
+    },
+    {
+        name: 'Excel',
+        icon: 'devicon-microsoftexcel-original',
+        color: '#107C41'
     }
 ];
 

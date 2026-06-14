@@ -4,28 +4,33 @@ import { technicalSkills, softSkills } from '../data/SkillsData';
 const skillCategories = [
   {
     label: 'Frontend',
-    names: ['React', 'HTML5', 'CSS3', 'Tailwind', 'Bootstrap'],
+    names: ['React', 'Angular', 'HTML5', 'CSS3', 'Tailwind', 'Bootstrap'],
     accent: 'indigo',
   },
   {
     label: 'Backend',
-    names: ['Node.js', 'PHP'],
+    names: ['Node.js', 'Express', 'Spring Boot', 'Django', 'Flask'],
     accent: 'emerald',
   },
   {
     label: 'Languages',
-    names: ['JavaScript', 'Java', 'Python', 'R'],
+    names: ['JavaScript', 'TypeScript', 'Java', 'Python', 'R', 'PHP'],
     accent: 'amber',
   },
   {
     label: 'Databases',
-    names: ['Oracle', 'MySQL'],
+    names: ['Oracle', 'MySQL', 'Postgres', 'SQLite'],
     accent: 'rose',
   },
   {
     label: 'Tools',
     names: ['Git', 'GitHub', 'Postman', 'Figma'],
     accent: 'sky',
+  },
+  {
+    label: 'Data Analysis',
+    names: ['Excel', 'Python', 'R'],
+    accent: 'violet',
   },
 ];
 
@@ -54,6 +59,11 @@ const accentStyles = {
     badge: 'bg-sky-100 dark:bg-sky-500/15 text-sky-600 dark:text-sky-400 border-sky-200 dark:border-sky-500/20',
     border: 'border-sky-200/60 dark:border-sky-500/15',
     glow: 'from-sky-100/50 dark:from-sky-500/5',
+  },
+  violet: {
+    badge: 'bg-violet-100 dark:bg-violet-500/15 text-violet-600 dark:text-violet-400 border-violet-200 dark:border-violet-500/20',
+    border: 'border-violet-200/60 dark:border-violet-500/15',
+    glow: 'from-violet-100/50 dark:from-violet-500/5',
   },
 };
 
@@ -114,12 +124,23 @@ const Skills = () => {
                         key={skill.name}
                         className="flex flex-col items-center gap-1.5 p-2 rounded-xl hover:bg-zinc-100/80 dark:hover:bg-zinc-800/30 transition-all transform hover:scale-105 hover:-translate-y-0.5 duration-300 group"
                       >
-                        <i
-                          className={`${skill.icon} text-2xl transition-transform duration-300 group-hover:rotate-6 ${
-                            skill.name === 'GitHub' ? 'text-zinc-900 dark:text-white' : ''
-                          }`}
-                          style={skill.name === 'GitHub' ? {} : { color: skill.color }}
-                        ></i>
+                        {skill.name === 'Excel' ? (
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            className="w-6 h-6 transition-transform duration-300 group-hover:rotate-6 text-[#107C41] shrink-0"
+                            fill="currentColor"
+                          >
+                            <path d="M23 1.5q.4 0 .7.3t.3.7v19q0 .4-.3.7t-.7.3h-11q-.4 0-.7-.3t-.3-.7V1.5q0-.4.3-.7t.7-.3h11zm-11 6v1.5h1.5V7.5H12zm0 3v1.5h1.5v-1.5H12zm0 3v1.5h1.5v-1.5H12zm0 3v1.5h1.5v-1.5H12zm3-9v1.5h1.5V7.5H15zm0 3v1.5h1.5v-1.5H15zm0 3v1.5h1.5v-1.5H15zm0 3v1.5h1.5v-1.5H15zm3-9v1.5h1.5V7.5H18zm0 3v1.5h1.5v-1.5H18zm0 3v1.5h1.5v-1.5H18zm0 3v1.5h1.5v-1.5H18zm3-9v1.5h1.5V7.5H21zm0 3v1.5h1.5v-1.5H21zm0 3v1.5h1.5v-1.5H21zm0 3v1.5h1.5v-1.5H21zM1.4 5.4l8.8-1.5q.4-.1.6.2t.2.6v14.6q0 .4-.2.6t-.6.2l-8.8-1.5q-.4-.1-.6-.4t-.2-.6V6.4q0-.4.2-.6t.6-.4zm4.8 7.9L8.4 9.1H6.7L5.3 11.7l-1.3-2.6H2.3l2.2 4.2-2.3 4.2h1.7l1.5-2.8 1.4 2.8h1.7l-2.4-4.2z" />
+                          </svg>
+                        ) : (
+                          <i
+                            className={`${skill.icon} text-2xl transition-transform duration-300 group-hover:rotate-6 ${
+                              ['GitHub', 'Express', 'Flask'].includes(skill.name) ? 'text-zinc-900 dark:text-white' : ''
+                            }`}
+                            style={['GitHub', 'Express', 'Flask'].includes(skill.name) ? {} : { color: skill.color }}
+                          ></i>
+                        )}
                         <span className="text-zinc-600 dark:text-zinc-300 text-[11px] text-center leading-tight opacity-80 group-hover:opacity-100 transition-opacity duration-300">
                           {skill.name}
                         </span>
