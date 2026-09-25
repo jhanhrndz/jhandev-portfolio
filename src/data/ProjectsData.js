@@ -4,8 +4,50 @@ import comparendo from "../assets/projects-imagen/Comparendo.webp";
 import epp from "../assets/projects-imagen/epp.webp";
 import sleepDisorders from "../assets/projects-imagen/sleep-disorders.webp";
 import HeartDisease from "../assets/projects-imagen/Heart-Disease-Prediction.webp";
+import ainexRobot from "../assets/projects-imagen/ainex-robot.png";
+import touchlessProjection from "../assets/projects-imagen/touchless-projection-mapping.png";
+import orionProject from "../assets/projects-imagen/orion-navigation.png";
+import projectionMapper from "../assets/projects-imagen/projection-mapping.png";
+
 
 export const projects = [
+  {
+      title: "Projection Mapper Studio: Real-Time Dual-Window Video Mapping Software",
+    description: "Professional real-time projection mapping software with dual-window 0 ms latency synchronization via BroadcastChannel. Features Bézier curved polygons with De Casteljau subdivision, optical micro- calibration, occlusion masks, standalone .pmap project packaging with embedded media, and hybrid GPU hardware- accelerated video rendering (FFmpeg).",
+    image: projectionMapper,
+    tags: ["Projection Mapping", "JavaScript", "HTML5 Canvas", "Python", "FFmpeg", "GPU Acceleration", "Computer Graphics", "BroadcastChannel", "Audiovisual", "Live Show"],
+    platforms: [
+      { type: "github", url: "https://github.com/jhanhrndz/projection-mapper" },
+    ],
+  },
+  {
+    title: "ORION: Intelligent Obstacle Navigation & Real-Time Depth Vision",
+    description: "Real-time edge AI navigation and obstacle avoidance system powered by monocular depth estimation (MiDaS) and wireless IoT computer vision. Features high-speed 30 FPS streaming on Seeed Studio XIAO ESP32S3 Sense, seamless hot-swap with fail-safe camera rollback, PyTorch Apple Silicon (MPS) acceleration, asynchronous multi-tone acoustic alerts, and a reactive FastAPI & WebSocket telemetry dashboard.",
+    image: orionProject,
+    tags: ["Computer Vision", "Python", "Deep Learning", "PyTorch", "MiDaS", "FastAPI", "WebSockets", "IoT", "ESP32-S3", "Edge AI"],
+    platforms: [
+      { type: "github", url: "https://github.com/AndresRuzTeran/OrionBelt" },
+      { type: "live", url: "https://youtu.be/UGBBGHXeREA?si=PLEpsjwqI7c7aLt2" } 
+    ],
+  },
+  {
+    title: "Touchless Projection Mapping: Vision AI & Gesture Control",
+    description: "Interactive projection mapping system powered by computer vision (Google MediaPipe) and real-time background subtraction to project a digitalized holographic arm onto physical surfaces. Features dual-window architecture, mid-air pinch gesture actuation, zero-calibration spatial mapping, and WebSocket integration for smart hardware and IoT devices.",
+    image: touchlessProjection,
+    tags: ["Computer Vision", "Python", "MediaPipe", "JavaScript", "Projection Mapping", "WebSockets", "FastAPI", "Docker", "HCI", "IoT"],
+    platforms: [
+      { type: "github", url: "https://github.com/jhanhrndz/touchless-projection-mapping" },
+    ],
+  },
+  {
+    title: "AiNex: Autonomous Humanoid Voice & Vision AI",
+    description: "Autonomous multimodal AI control system for the AiNex humanoid robot featuring wake-word voice interaction (Faster-Whisper), VLM visual navigation (Qwen2.5-VL on Ollama), ROS kinematics, and real-time facial surveillance (YuNet).",
+    image: ainexRobot,
+    tags: ["Robotics", "Python", "ROS", "Computer Vision", "NLP", "LLM", "Faster-Whisper", "Ollama", "OpenCV", "AI"],
+    platforms: [
+      { type: "github", url: "https://github.com/jhanhrndz/ainex-voice-ai" },
+    ],
+  },
   {
     title: "BuildSafe",
     description: "Smart Safety Management and Monitoring for Personal Protective Equipment (PPE) Compliance on Construction Sites",
