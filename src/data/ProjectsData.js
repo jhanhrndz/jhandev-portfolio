@@ -26,7 +26,7 @@ export const projects = [
     tags: ["Computer Vision", "Python", "Deep Learning", "PyTorch", "MiDaS", "FastAPI", "WebSockets", "IoT", "ESP32-S3", "Edge AI"],
     platforms: [
       { type: "github", url: "https://github.com/AndresRuzTeran/OrionBelt" },
-      { type: "live", url: "https://youtu.be/UGBBGHXeREA?si=PLEpsjwqI7c7aLt2" } 
+      { type: "live", url: "https://youtube.com/playlist?list=PLIUGWsZSXFCk&si=F7yvRY9QKDO7QCAe" } 
     ],
   },
   {
