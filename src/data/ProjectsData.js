@@ -17,6 +17,7 @@ export const projects = [
     tags: ["Projection Mapping", "JavaScript", "HTML5 Canvas", "Python", "FFmpeg", "GPU Acceleration", "Computer Graphics", "BroadcastChannel", "Audiovisual", "Live Show"],
     platforms: [
       { type: "github", url: "https://github.com/jhanhrndz/projection-mapper" },
+      { type: "demo", url: "https://projection-mapper-demo.vercel.app/" },
     ],
   },
   {
