@@ -7,8 +7,7 @@ import HeartDisease from "../assets/projects-imagen/Heart-Disease-Prediction.web
 import ainexRobot from "../assets/projects-imagen/ainex-robot.png";
 import touchlessProjection from "../assets/projects-imagen/touchless-projection-mapping.png";
 import orionProject from "../assets/projects-imagen/orion-navigation.png";
-import projectionMapper from "../assets/projects-imagen/projection-mapping.png";
-
+import projectionMapper from "../assets/projects-imagen/projection-mapper.png";
 
 export const projects = [
   {
