@@ -5,7 +5,7 @@ import epp from "../assets/projects-imagen/epp.webp";
 import sleepDisorders from "../assets/projects-imagen/sleep-disorders.webp";
 import HeartDisease from "../assets/projects-imagen/Heart-Disease-Prediction.webp";
 import ainexRobot from "../assets/projects-imagen/ainex-robot.png";
-import touchlessProjection from "../assets/projects-imagen/touchless-projection-mapping.png";
+import touchlessProjection from "../assets/projects-imagen/touchless-projection-mapping.jpg";
 import orionProject from "../assets/projects-imagen/orion-navigation.png";
 import projectionMapper from "../assets/projects-imagen/projection-mapper.png";
 
@@ -98,7 +98,7 @@ export const projects = [
     title: "TransporMap.",
     description: "Java app that lets users report real-time road hazards and obstructions, reshaping urban mobility.",
     image: transpormap,
-    tags: ["Java", "Oracle Database", "Social", "MapViewer", "Transport", "GPS", "Brower", "Invias.gov"],
+    tags: ["Java", "Oracle Database", "Social", "MapViewer", "Transport", "GPS", "Browser", "Invias.gov"],
     platforms: [
       { type: "github", url: "https://github.com/jhanhrndz/transpormap" }
     ],
